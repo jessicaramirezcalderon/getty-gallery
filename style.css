@@ -1,0 +1,61 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;900&display=swap');
+
+body {
+    background-color: navajowhite;
+}
+#carouselExampleControls {
+    width: 50%;
+    margin: 50px auto 100px auto;
+}
+
+#navbarNavAltMarkup {
+    justify-content: center;
+    margin-top: 30px;
+}
+
+.top-nav {
+    text-align: center;
+    justify-content: center;
+    /*background-color: #3FC1C0;*/
+    background-color: salmon;
+}
+
+a {
+    font-weight: 600;
+}
+
+.nav-link {
+    color: black;
+}
+
+/*h1 {
+    padding: 10px;
+}*/
+h1 {
+    color: white;
+    font-weight: 600;
+}
+h1, .nav-link {
+    font-family: 'Noto Sans SC', sans-serif;
+}
+
+footer {
+    height: 30px;
+    margin: 0;
+    width: 100%;
+    background-color: salmon;
+    
+}
+
+
+
+
+
+/*Moile*/
+
+@media only screen and (max-width: 600px) {
+    #carouselExampleControls {
+        width: 90%;
+        margin: 30px auto;
+    }
+  }
