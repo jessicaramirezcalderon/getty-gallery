@@ -5,6 +5,9 @@ function displayImg() {
   var cityName = $(this).attr("id");
   console.log(cityName);
 
+  // ivan Stop
+
+//Jess start
   // 2. update queryURL; inserting city name via variable
   var queryURL = "https://api.unsplash.com/photos/random?query=" + cityName +"&count=10&client_id=pFIWUHqX-OP7nX7XPXSeK2lpEddTVseWjHAQ0ct9mQI";
   // 3. call ajax method to send a request
@@ -18,7 +21,9 @@ function displayImg() {
       console.log(queryURL);
       // Log the resulting object
       console.log(response);
+//Jess stop
 
+//Ivan start
       // 5. for-loop to create tags for images and append to carousel
       for(var i = 0; i < 10; i++){
         // 6. create div tag that will contain img and append carousel-item classes
