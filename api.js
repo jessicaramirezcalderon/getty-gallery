@@ -18,8 +18,14 @@ $.ajax({
   });
 
 
-
-// ivan here
+// ivan start
+// playing with event listener when a city button is clicked to display pics for that city in carousel
 $("button").on("click", function (event) {
   console.log(event.target);
 });
+
+// check if carousel arrows are clicked
+$("carousel-arrow").on("click", function (event) {
+  console.log(event.target);
+});
+// ivan stop

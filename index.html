@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -26,37 +25,37 @@
                 </button>
                 <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                     <div class="navbar-nav">
-                        <button class="nav-link btn-outline-warning city" id="amsterdam">Amsterdam</button>
-                        <a class="nav-link btn-outline-warning" href="#">London</a>
-                        <a class="nav-link btn-outline-warning" href="#">Los Angeles</a>
-                        <a class="nav-link btn-outline-warning" href="#">Paris</a>
-                        <a class="nav-link btn-outline-warning" href="#">New York City</a>
-                        <a class="nav-link btn-outline-warning" href="#">San Francisco</a>
-                        <a class="nav-link btn-outline-warning" href="#">São Paulo</a>
-                        <a class="nav-link btn-outline-warning" href="#">Singapore</a>
-                        <a class="nav-link btn-outline-warning" href="#">Sydney</a>
-                        <a class="nav-link btn-outline-warning" href="#">Toronto</a>
+                        <button class="nav-link btn-outline-warning" id="amsterdam">Amsterdam</button>
+                        <button class="nav-link btn-outline-warning" id="london">London</button>
+                        <button class="nav-link btn-outline-warning" id="los-angeles">Los Angeles</button>
+                        <button class="nav-link btn-outline-warning" id="paris">Paris</button>
+                        <button class="nav-link btn-outline-warning" id="new-york-city">New York City</button>
+                        <button class="nav-link btn-outline-warning" id="san-francisco">San Francisco</button>
+                        <button class="nav-link btn-outline-warning" id="sao-paulo">São Paulo</button>
+                        <button class="nav-link btn-outline-warning" id="singapore">Singapore</button>
+                        <button class="nav-link btn-outline-warning" id="sydney">Sydney</button>
+                        <button class="nav-link btn-outline-warning" id="toronto">Toronto</button>
                     </div>
                 </div>
             </div>
         </nav>
 
         <!--Gallery-->
-        <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+        <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel" data-bs-interval=false>
             <div class="carousel-inner">
+                <!-- default image -->
                 <div class="carousel-item active">
-                    <img src="https://images.unsplash.com/photo-1473997094636-80cc50db3e0c" class="d-block w-100"
-                        alt="Diversity Theme Image">
+                    <img src="https://kid101.com/wp-content/uploads/2017/11/Where-Do-You-Want-To-Go.jpg" 
+                    class="d-block w-100" alt="where do you want to go">
                 </div>
-
+                <!-- API pics go here depending on city button -->
+                <div class="carousel-item">
+                    <img src="https://images.unsplash.com/photo-1606851453139-1f6c1260f1ca" 
+                    class="d-block w-100" alt="breakfast">
+                </div>
             </div>
 
-            <div class="carousel-item">
-                <img src="https://images.unsplash.com/photo-1606851453139-1f6c1260f1ca" class="d-block w-100"
-                    alt="Diversity Theme Image">
-            </div>
-
-
+            <!-- Previous and Next arrows for carousel -->
             <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-bs-slide="prev">
                 <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                 <span class="visually-hidden">Previous</span>
@@ -69,7 +68,6 @@
 
         <footer class="fixed-bottom"></footer>
 
-
         <!--try not to change the order of the API and Jquery scripts-->
         <script src="https://code.jquery.com/jquery-3.5.1.js"
             integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
@@ -80,5 +78,4 @@
         <script src="api.js"></script>
 
     </body>
-
 </html>
