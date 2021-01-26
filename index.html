@@ -1,78 +1,77 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Diversity Gallery</title>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Diversity Gallery</title>
 
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
-    <link rel="stylesheet" href="style.css">
-</head>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+            integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+        <link rel="stylesheet" href="style.css">
+    </head>
 
-<body>
-    <!--header-->
+    <body>
+        <!--header-->
+        <header class="top-nav navbar navbar-expand-lg navbar-light">
+            <h1 class="p-3">Top 10 Most Diverse Cities in the World</h1>
+        </header>
 
-    <header class="top-nav navbar navbar-expand-lg navbar-light">
-        <h1 class="p-3">Top 10 Most Diverse Cities in the World</h1>
-    </header>
-
-    <nav class="navbar navbar-expand-lg navbar-light">
-        <div class="container-fluid">
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
-                aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-                <div class="navbar-nav">
-                    <a class="nav-link btn-outline-warning" href="#">Amsterdam</a>
-                    <a class="nav-link btn-outline-warning" href="#">London</a>
-                    <a class="nav-link btn-outline-warning" href="#">Los Angeles</a>
-                    <a class="nav-link btn-outline-warning" href="#">Paris</a>
-                    <a class="nav-link btn-outline-warning" href="#">New York City</a>
-                    <a class="nav-link btn-outline-warning" href="#">San Francisco</a>
-                    <a class="nav-link btn-outline-warning" href="#">São Paulo</a>
-                    <a class="nav-link btn-outline-warning" href="#">Singapore</a>
-                    <a class="nav-link btn-outline-warning" href="#">Sydney</a>
-                    <a class="nav-link btn-outline-warning" href="#">Toronto</a>
+        <nav class="navbar navbar-expand-lg navbar-light">
+            <div class="container-fluid">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                    <div class="navbar-nav">
+                        <button class="nav-link btn-outline-warning city" id="amsterdam">Amsterdam</button>
+                        <a class="nav-link btn-outline-warning" href="#">London</a>
+                        <a class="nav-link btn-outline-warning" href="#">Los Angeles</a>
+                        <a class="nav-link btn-outline-warning" href="#">Paris</a>
+                        <a class="nav-link btn-outline-warning" href="#">New York City</a>
+                        <a class="nav-link btn-outline-warning" href="#">San Francisco</a>
+                        <a class="nav-link btn-outline-warning" href="#">São Paulo</a>
+                        <a class="nav-link btn-outline-warning" href="#">Singapore</a>
+                        <a class="nav-link btn-outline-warning" href="#">Sydney</a>
+                        <a class="nav-link btn-outline-warning" href="#">Toronto</a>
+                    </div>
                 </div>
             </div>
-        </div>
-    </nav>
+        </nav>
 
-    <!--Gallery-->
+        <!--Gallery-->
+        <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="https://images.unsplash.com/photo-1473997094636-80cc50db3e0c" class="d-block w-100"
+                        alt="Diversity Theme Image">
+                </div>
 
-    <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
-        <div class="carousel-inner">
-            <div class="carousel-item active">
-                <img src="https://images.unsplash.com/photo-1473997094636-80cc50db3e0c" class="d-block w-100"
-                    alt="Diversity Theme Image">
             </div>
-
+            <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </a>
         </div>
-        <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-bs-slide="prev">
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Previous</span>
-        </a>
-        <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-bs-slide="next">
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Next</span>
-        </a>
-    </div>
 
-    <footer class="fixed-bottom"></footer>
+        <footer class="fixed-bottom"></footer>
 
 
-<!--try not to change the order of the API and Jquery scripts-->
-    <script src="https://code.jquery.com/jquery-3.5.1.js"
-        integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
-    <script src="gallery.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW"
-        crossorigin="anonymous"></script>
-    <script src="api.js"></script>
+        <!--try not to change the order of the API and Jquery scripts-->
+        <script src="https://code.jquery.com/jquery-3.5.1.js"
+            integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+        <script src="gallery.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW"
+            crossorigin="anonymous"></script>
+        <script src="api.js"></script>
 
-</body>
+    </body>
 
 </html>
