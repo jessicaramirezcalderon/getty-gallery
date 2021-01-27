@@ -17,7 +17,7 @@ body {
     text-align: center;
     justify-content: center;
     /*background-color: #3FC1C0;*/
-    background-color: salmon;
+    background-color: firebrick;
 }
 
 a {
@@ -31,6 +31,7 @@ a {
 /*h1 {
     padding: 10px;
 }*/
+
 h1 {
     color: white;
     font-weight: 600;
@@ -43,12 +44,30 @@ footer {
     height: 30px;
     margin: 0;
     width: 100%;
-    background-color: salmon;
+    background-color: firebrick;
     
 }
 
+/* ivan start */
+/* modifying buttons */
+.btn-outline-warning{
+    border-color:orange;
+    background-color: cornflowerblue;
+}
+
+.navbar-light .navbar-nav .nav-link {
+    color: black;
+    font-weight: bold;
+    margin-right: 10px;
+}
+
+button:hover{
+    background-color: orange!important;
+    border-color:cornflowerblue!important;
+}
 
 
+/* ivan stop */
 
 
 /*Moile*/
