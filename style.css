@@ -1,3 +1,4 @@
+/*Jess start*/
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;900&display=swap');
 
 body {
@@ -47,6 +48,7 @@ footer {
     background-color: firebrick;
     
 }
+/*Jess stop*/
 
 /* ivan start */
 /* modifying buttons */
@@ -69,8 +71,10 @@ button:hover{
 
 /* ivan stop */
 
-
 /*Moile*/
+
+/*Jess start*/
+
 
 @media only screen and (max-width: 600px) {
     #carouselExampleControls {
@@ -78,3 +82,4 @@ button:hover{
         margin: 30px auto;
     }
   }
+  /*Jess stop*/
