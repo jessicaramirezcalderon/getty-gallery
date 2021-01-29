@@ -8,18 +8,18 @@ function displayImg() {
   // ivan Stop
 
 //Jess start
-  // 2. update queryURL; inserting city name via variable
+  // 2. update queryURL; inserting city name via variable {Jess}
   var queryURL = "https://api.unsplash.com/photos/random?query=" + cityName +"&count=10&client_id=pFIWUHqX-OP7nX7XPXSeK2lpEddTVseWjHAQ0ct9mQI";
-  // 3. call ajax method to send a request
+  // 3. call ajax method to send a request {Jess}
   $.ajax({
     url: queryURL,
     method: "GET"
   })
-    // 4. receive response; with this we can pull image link to display onto page
+    // 4. receive response; with this we can pull image link to display onto page {Jess}
     .then(function (response) {
-      // Log the queryURL
+      // Log the queryURL {Jess}
       console.log(queryURL);
-      // Log the resulting object
+      // Log the resulting object {Jess}
       console.log(response);
 //Jess stop
 

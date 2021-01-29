@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;900&display=swap');
 
+/* original css*/
 body {
     background-color: navajowhite;
 }
@@ -8,47 +9,47 @@ body {
     margin: 50px auto 100px auto;
 }
 
+/* original css */
 #navbarNavAltMarkup {
     justify-content: center;
     margin-top: 30px;
-}
-
+} 
+/* original css */
 .top-nav {
     text-align: center;
     justify-content: center;
-    /*background-color: #3FC1C0;*/
+    background-color: #3FC1C0;
     background-color: firebrick;
-}
-
+} 
+/* original css */
 a {
     font-weight: 600;
-}
-
+} 
+/* original css */
 .nav-link {
     color: black;
-}
-
-/*h1 {
-    padding: 10px;
-}*/
-
+} 
+/* original css */
 h1 {
     color: white;
     font-weight: 600;
-}
+} 
+/* original css */
 h1, .nav-link {
     font-family: 'Noto Sans SC', sans-serif;
-}
+} 
 
+/* original css */
 footer {
     height: 30px;
     margin: 0;
     width: 100%;
     background-color: firebrick;
-    
-}
+    text-align: center;
+    font: 20px;
+}  
 
-/* ivan start */
+/*ivan start */
 /* modifying buttons */
 .btn-outline-warning{
     border-color:orange;
@@ -64,17 +65,16 @@ footer {
 button:hover{
     background-color: orange!important;
     border-color:cornflowerblue!important;
-}
+} 
+/* ivan stop
 
 
-/* ivan stop */
 
-
-/*Moile*/
-
+/*Mobile*/
 @media only screen and (max-width: 600px) {
     #carouselExampleControls {
         width: 90%;
         margin: 30px auto;
     }
-  }
+} 
+
