@@ -1,3 +1,4 @@
+/*Jess start*/
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;900&display=swap');
 
 /* original css*/
@@ -33,6 +34,7 @@ a {
 h1 {
     color: white;
     font-weight: 600;
+    text-align: center;
 } 
 /* original css */
 h1, .nav-link {
@@ -45,9 +47,9 @@ footer {
     margin: 0;
     width: 100%;
     background-color: firebrick;
-    text-align: center;
-    font: 20px;
-}  
+    
+}
+/*Jess stop*/
 
 /*ivan start */
 /* modifying buttons */
@@ -69,12 +71,25 @@ button:hover{
 /* ivan stop
 
 
+/*Moile*/
 
-/*Mobile*/
+/*Jess start*/
+
+
 @media only screen and (max-width: 600px) {
     #carouselExampleControls {
         width: 90%;
         margin: 30px auto;
     }
-} 
+  }
+  /*Jess stop*/
 
+  /* malcolm
+  css additions from anthony:
+  height: 500;
+  width: 500;
+  background-position: center;
+  background-size: contain; 
+  background-repeat: no-repeat;
+
+  use js to inject the style  */
