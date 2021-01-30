@@ -47,7 +47,7 @@ function displayImg() {
           $(divImg).append(cityImg);
 
           // append divImg to carousel-inner class
-          $(".carousel-inner").append(divImg);
+          $(".orbit-inner").append(divImg);
 
           alreadyLoaded = true;
         }
