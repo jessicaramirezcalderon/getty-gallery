@@ -1,6 +1,5 @@
 //Check whether or not someone has already clicked for the first time
 let alreadyLoaded = false;
-//minor change to check file status
 
 //Foundation search bar
 $(document).foundation();
@@ -13,9 +12,6 @@ $('.search')
       $(".search-field").focus();
     }
   })
-
-
-
 
 //grab the input data before using it
 const cityInput = $("#city-input");
@@ -40,7 +36,6 @@ function displayImg(e) {
   })
     // Promise function
     .then(function (response) {
-   
       //Insert onto the elements defined in loop below the images once the first load occurs
       if (alreadyLoaded) {
         $("img.d-block").each(function (i) {
@@ -89,7 +84,6 @@ Ivan
 
 /*Added the functionality to load different images for each city. Added if and else statements for each state
 Commented out some console logs
-
 Feb 01 Added the search functionality and search bar. Also eliminated the on click event since we no longer need it.
 Jessica
 */
