@@ -79,6 +79,7 @@ h1 {
     text-align: center;
 }
 
+
 /* original css */
 h1,
 .nav-link {
@@ -145,8 +146,17 @@ button:hover {
     }
 }
 
-@media only screen and (max-width: 800px){
-    body {background-color:bisque;}
+/* Ernesto start, changed color of text in footer to white */
+@media only screen and (max-width: 800px) {
+    body {
+        background-color: bisque;
+    }
+   .top-nav, svg{
+        background-color: rgb(6, 175, 175);
+    }
+    .bg-primary, button{
+        background-color: rgb(6, 175, 175) !important;
+    }
 }
 
 
