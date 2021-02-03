@@ -1,40 +1,11 @@
+/*Jess start*/
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;900&display=swap');
-
-/* search button */
-.searchbar {
-    margin: 1rem;
-}
-.search-field {
-    width: 0;
-    height: 40px;
-    margin-left: 1rem;
-    padding: 0;
-    border-radius: 50px;
-    border: none;
-    transition: all 0.5s ease;
-}
-.expand-search {
-    width: 80%;
-    max-width: calc(80% - 3rem);
-    border: 1px solid #c9c9c9;
-    padding: .5rem;
-}
-svg {
-    width: 20px;
-    height: 20px;
-}
-.button {
-    border-radius: 50px;
-}
-/*  */
-
-
-
 
 /* original css*/
 body {
-    background-color: navajowhite;
+    background-color: white;
 }
+
 #carouselExampleControls {
     width: 50%;
     margin: 50px auto 100px auto;
@@ -44,46 +15,96 @@ body {
 #navbarNavAltMarkup {
     justify-content: center;
     margin-top: 30px;
-} 
+}
+
 /* original css */
 .top-nav {
     text-align: center;
     justify-content: center;
-    background-color: #3FC1C0;
-    background-color: firebrick;
-} 
+    background-color: #027BCE;
+}
+
+
+nav {
+    width: 60%;
+    margin: 0 auto;
+    border-radius: 5px;
+}
+
+/*foundation search bar*/
+
+.searchbar {
+    margin: 1rem;
+}
+
+.search-field {
+    width: 0;
+    height: 40px;
+    margin: 0;
+    padding: 0;
+    border-radius: 50px;
+    border: none;
+    transition: all 0.5s ease;
+}
+
+.expand-search {
+    width: 80%;
+    max-width: calc(80% - 3rem);
+    padding: .5rem;
+}
+
+svg {
+    width: 20px;
+    height: 20px;
+}
+
+#search-icon {
+    border-radius: 5px;
+}
+
+.input-group-button {
+    margin-left: 70px;
+}
+
+
 /* original css */
 a {
     font-weight: 600;
-} 
+}
+
 /* original css */
 .nav-link {
     color: black;
-} 
+}
+
 /* original css */
 h1 {
     color: white;
     font-weight: 600;
-} 
+    text-align: center;
+}
+
 /* original css */
-h1, .nav-link {
+h1,
+.nav-link {
     font-family: 'Noto Sans SC', sans-serif;
-} 
+}
 
 /* original css */
 footer {
     height: 30px;
     margin: 0;
     width: 100%;
-    background-color: firebrick;
-    text-align: center;
-    font: 20px;
-}  
+    background-color: #027BCE;
+
+}
+
+/*Jess stop*/
 
 /*ivan start */
 /* modifying buttons */
-/* .btn-outline-warning{
-    border-color:orange;
+.btn-outline-warning {
+    border-color: orange;
     background-color: cornflowerblue;
 }
 
@@ -93,18 +114,40 @@ footer {
     margin-right: 10px;
 }
 
-button:hover{
-    background-color: orange!important;
-    border-color:cornflowerblue!important;
-}  */
+button:hover {
+    background-color: orange !important;
+    border-color: cornflowerblue !important;
+}
+
 /* ivan stop
+/*Moile*/
+
+/*Jess start*/
 
 
-/*Mobile*/
 @media only screen and (max-width: 600px) {
     #carouselExampleControls {
         width: 90%;
         margin: 30px auto;
     }
-} 
 
+    .input-group-button {
+        margin-left: 0px;
+    }
+
+    .expand-search {
+        width: 90%;
+    }
+
+}
+
+/*Jess stop*/
+
+/* malcolm
+  css additions from anthony:
+  height: 500;
+  width: 500;
+  background-position: center;
+  background-size: contain; 
+  background-repeat: no-repeat;
+  use js to inject the style  */
