@@ -118,8 +118,17 @@ button:hover {
     border-color: cornflowerblue !important;
 }
 
+.current-weather {
+    margin: 15px;
+    border: solid 1px #ccc;
+    border-radius: 5px;
+    padding: 30px;
+    width: 100%;
+    line-height: 50px;
+    letter-spacing: 1px;
+}
 /* ivan stop
-/*Moile*/
+/*Mobile*/
 
 /*Jess start*/
 
