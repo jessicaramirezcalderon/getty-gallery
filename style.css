@@ -8,8 +8,7 @@ body {
 
 #carouselExampleControls {
     width: 50%;
-    /* margin: 50px auto 100px auto; */
-    margin: 70px auto 50px 665px;
+    margin: 50px auto 100px auto;
 }
 
 /* original css */
@@ -127,7 +126,6 @@ button:hover {
     line-height: 50px;
     letter-spacing: 1px;
 }
-
 /* ivan stop
 /*Moile*/
 

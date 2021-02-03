@@ -12,18 +12,15 @@ $('.search').on('click', function (event) {
   }
 });
 
-
 //grab the input data before using it
 var cityInput = $("#city-input");
 var cityNameTag = $("<h3>");
 var currentWeather = $("#current-weather");
 
-
-
 // create function that states pulls id of city button, calls API to gather images and append to carousel
 function displayImg(e) {
 
-  //stop search unless user presses the enter key. The Keycode for "enter" is the number 13
+  // stop search unless user presses the enter key. The Keycode for "enter" is the number 13
   if (e.keyCode !== 13) {
     return;
   }
@@ -33,7 +30,7 @@ function displayImg(e) {
   console.log(cityInput);
 
   // API Query call
-  const queryURL = "https://api.unsplash.com/photos/random?query=breakfast+" + cityInput + "&count=10&orientation=landscape&client_id=V3iL4jHxM2p-IjPs13Jjt_v8QdU7RsoO6ZyZQjymdSU";
+  var queryURL = "https://api.unsplash.com/photos/random?query=breakfast+" + cityInput + "&count=10&orientation=landscape&client_id=V3iL4jHxM2p-IjPs13Jjt_v8QdU7RsoO6ZyZQjymdSU";
 
   $.ajax({
     url: queryURL,
@@ -47,9 +44,7 @@ function displayImg(e) {
         $("img.d-block").each(function (i) {
           $(this).attr("src", response[i].urls.regular);
           $(this).attr("alt", response[i].location.city);
-          console.log(response[i].urls);
         });
-
       }
 
       else {
@@ -77,10 +72,6 @@ function displayImg(e) {
 
 // function for current weather API call
 function currentWeatherAPI() {
-  console.log("currentWeatherAPI function");
-  console.log("uvIndexAPI function");
-
-  var apiKey = "c7cde66d595fb98577da25bd96a3df85";
 
   // add border and spacing for currentWeather div tag
   currentWeather.addClass("current-weather");
@@ -89,6 +80,8 @@ function currentWeatherAPI() {
   $(cityNameTag).text(cityInput);
   // append h3 tag to currentWeather div tag
   currentWeather.append(cityNameTag);
+
+  var apiKey = "c7cde66d595fb98577da25bd96a3df85";
 
   // query URL for city weather
   var queryURL = "https://api.openweathermap.org/data/2.5/weather?q=" + cityInput + "&appid=" + apiKey;
@@ -115,7 +108,7 @@ function currentWeatherAPI() {
       var humidity = "Humidity: " + response.main.humidity + "%";
       var windSpeed = "Wind Speed: " + response.wind.speed + " MPH";
       // append humidity and wind speed to currentWeather
-      $(currentWeather).append(humidity + "<br>" + windSpeed + "<br>");
+      $(currentWeather).append(humidity + "<br />" + windSpeed + "<br>");
     });
 }
 
