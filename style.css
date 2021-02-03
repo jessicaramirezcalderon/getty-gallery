@@ -5,9 +5,33 @@
 body {
     background-color: white;
 }
-#carouselExampleControls {
+
+#presentation{
+    background-color: gold;
+}
+
+#practice-card {
+    float: left;
+    padding-right: auto;
+}
+
+.card {
+    /* margin: 20px 20px 20px 20px ; */
+    height: 700px;
+    /* width: 650px; */
     width: 50%;
-    margin: 50px auto 100px auto;
+}
+
+.d-block {
+    height: 700px;
+    /* width: 650px; */
+    width: 50%;
+}
+
+#carouselExampleControls {
+    float: right;
+    width: 50%;
+    /* margin: 50px auto 100px auto; */
 }
 
 /* original css */
@@ -114,7 +138,7 @@ button:hover{
 /* ivan stop
 
 
-/*Moile*/
+
 
 /*Jess start*/
 
@@ -135,13 +159,3 @@ button:hover{
 
   }
   /*Jess stop*/
-
-  /* malcolm
-  css additions from anthony:
-  height: 500;
-  width: 500;
-  background-position: center;
-  background-size: contain; 
-  background-repeat: no-repeat;
-
-  use js to inject the style  */
