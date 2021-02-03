@@ -82,8 +82,54 @@ function displayImg() {
   // clear div containing images
   $(".carousel-inner").empty();
 
+
   // API Query call
   var queryURL = "https://api.unsplash.com/photos/random?query=" + cityName + "&count=10&orientation=landscape&client_id=duheouvYAukp2dG98jzVI1Y2VnHKe-PnTeWRmeKt5ss";
+
+  var apiKey = "c7cde66d595fb98577da25bd96a3df85";
+  // query URL for city weather
+  var queryURL = "https://api.openweathermap.org/data/2.5/weather?q=" + cityName + "&appid=" + apiKey;
+
+  // API call for city weather
+  $.ajax({
+    url: queryURL,
+    method: "GET"
+  })
+    .then(function (response) {
+      console.log("unsplash url - " + queryURL);
+
+      // for-loop to create tags for images and append to carousel
+      for (var i = 0; i < response.length; i++) {
+        //create div tag that will contain img and append carousel-item classes
+        var divImg = $("<div>").addClass("carousel-item");
+        divImg.attr("id", i);
+
+        //create img tag that will contain city img and append d-block w-100 classes
+        var cityImg = $("<img>").addClass("d-block w-100");
+        $(cityImg).attr("src", `${response[i].urls.regular}`);
+        $(cityImg).attr("alt", `${response[i].location.city}`);
+
+ jrc
+        // append cityImg to divImg
+        $(divImg).append(cityImg);
+        // append divImg to carousel-inner class
+        $(".carousel-inner").append(divImg);
+
+        var firstImgTag = $("#0").addClass("active");
+
+        //Push the input into local storage
+        searchList.push(cityName);
+        localStorage.setItem("list", JSON.stringify(searchList));
+        const listGroup = $(".badge");
+
+        //Limit number of stored items on the page tp 5
+
+        if (listGroup.length > 4) {
+          $(listGroup.get(4)).remove();
+        }
+
+        $("#input-storage").prepend(`<button class="badge rounded-pill bg-light text-dark">${cityName}</button>`);
+
 
   $.ajax({
     url: queryURL,
@@ -111,19 +157,6 @@ function displayImg() {
 
         var firstImgTag = $("#0").addClass("active");
 
-        //Push the input into local storage
-        searchList.push(cityName);
-        localStorage.setItem("list", JSON.stringify(searchList));
-        const listGroup = $(".badge");
-
-        //Limit number of stored items on the page tp 5
-
-        if (listGroup.length > 4) {
-          $(listGroup.get(4)).remove();
-        }
-
-        $("#input-storage").prepend(`<button class="badge rounded-pill bg-light text-dark">${cityName}</button>`);
-
       }
 
       searchList.reverse().slice(0, 5).forEach((citySearch) => {
@@ -136,3 +169,10 @@ function displayImg() {
 
 // user clicks Enter, function kicks off to get current weather and then city images
 cityInput.on("keypress", currentWeatherAPI);
+
+
+/*Added the functionality to load different images for each city. Added if and else statements for each state
+Commented out some console logs
+Feb 01 Added the search functionality and search bar. Also eliminated the on click event since we no longer need it.
+Jessica
+*/
