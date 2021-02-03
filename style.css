@@ -3,7 +3,8 @@
 
 /* original css*/
 body {
-    background-color: white;
+    /* Ernesto start, changed background color */
+    background-color: rgb(180, 221, 240)
 }
 
 #carouselExampleControls {
@@ -22,7 +23,7 @@ body {
     text-align: center;
     justify-content: center;
     background-color: #027BCE;
-} 
+}
 
 
 nav {
@@ -39,28 +40,28 @@ nav {
     padding: 0;
     border-radius: 50px;
     transition: all 0.5s ease;
-  }
-  
-  .expand-search {
+}
+
+.expand-search {
     width: 80%;
     max-width: calc(80% - 3rem);
     padding: .5rem;
-  }
-  
-  svg {
+}
+
+svg {
     width: 20px;
     height: 20px;
-  }
-  
-  #search-icon {
-    border-radius: 5px;
-  }
-  
-  .input-group-button {
-      margin-left: 70px;
-  }
+}
 
-  
+#search-icon {
+    border-radius: 5px;
+}
+
+.input-group-button {
+    margin-left: 70px;
+}
+
+
 /* original css */
 a {
     font-weight: 600;
@@ -76,7 +77,8 @@ h1 {
     color: white;
     font-weight: 600;
     text-align: center;
-} 
+}
+
 /* original css */
 h1,
 .nav-link {
@@ -89,8 +91,9 @@ footer {
     margin: 0;
     width: 100%;
     background-color: #027BCE;
-    
+
 }
+
 /*Jess stop*/
 
 /*ivan start */
@@ -120,6 +123,7 @@ button:hover {
     line-height: 50px;
     letter-spacing: 1px;
 }
+
 /* ivan stop
 /*Mobile*/
 
@@ -139,11 +143,23 @@ button:hover {
     .expand-search {
         width: 90%;
     }
+}
 
-  }
-  /*Jess stop*/
+@media only screen and (max-width: 800px){
+    body {background-color:bisque;}
+}
 
-  /* malcolm
+
+/* Ernesto start, changed color of text in footer to white */
+#btTag {
+    color: white;
+
+}
+
+
+/*Jess stop*/
+
+/* malcolm
   css additions from anthony:
   height: 500;
   width: 500;
