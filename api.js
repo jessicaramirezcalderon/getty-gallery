@@ -82,7 +82,7 @@ function displayImg() {
   $(".carousel-inner").empty();
 
   // API Query call
-  var queryURL = "https://api.unsplash.com/photos/random?query=" + cityName + "&count=10&orientation=landscape&client_id=duheouvYAukp2dG98jzVI1Y2VnHKe-PnTeWRmeKt5ss";
+  var queryURL = "https://api.unsplash.com/search/photos?query=" + cityName + "&count=10&orientation=landscape&client_id=duheouvYAukp2dG98jzVI1Y2VnHKe-PnTeWRmeKt5ss";
 
   $.ajax({
     url: queryURL,
