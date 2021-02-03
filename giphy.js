@@ -62,7 +62,7 @@ function getGifKeys() {
     var apiKey = "sybBXVqNNyH0EPjFu28Tl0KiGOaCADFu";
 
     // use this API call to get collection of words similar to currentWeather
-    var queryUrl = "https://api.giphy.com/v1/gifs/search/tags?q=" + currentWeather + "&limit=2&api_key=" + apiKey;
+    var queryUrl = "https://api.giphy.com/v1/gifs/search/tags?q=" + currentWeather + "&limit=10&api_key=" + apiKey;
 
     $.ajax({
         url: queryUrl,
@@ -92,11 +92,10 @@ function createGif() {
     for (var i = 0; i < weatherKeys.length; i++) {
 
         // query URLs for giphy search - testing out 2 different ones
-        // var queryUrl = "https://api.giphy.com/v1/gifs/search?q=" + weatherKeys[i] + "&limit=5&api_key=" + apiKey;
-        var queryUrl = "https://api.giphy.com/v1/gifs/random?tag=" + weatherKeys[i] + "&limit=5&api_key=" + apiKey;
+        // var queryUrl = "https://api.giphy.com/v1/gifs/search?q=" + weatherKeys[0] + "&limit=10&api_key=" + apiKey;
+        var queryUrl = "https://api.giphy.com/v1/gifs/random?tag=" + weatherKeys[0] + "&limit=10&api_key=" + apiKey;
 
         gifURLs.push(queryUrl);
-
         console.log("RESPONSE - " + gifURLs[i]);
 
         // ajax for RANDOM queryURL
