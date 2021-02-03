@@ -22,7 +22,7 @@ body {
     text-align: center;
     justify-content: center;
     background-color: #027BCE;
-}
+} 
 
 
 nav {
@@ -35,9 +35,9 @@ nav {
 
 .searchbar {
     margin: 1rem;
-}
-
-.search-field {
+  }
+  
+  .search-field {
     width: 0;
     height: 40px;
     margin: 0;
@@ -45,28 +45,28 @@ nav {
     border-radius: 50px;
     border: none;
     transition: all 0.5s ease;
-}
-
-.expand-search {
+  }
+  
+  .expand-search {
     width: 80%;
     max-width: calc(80% - 3rem);
     padding: .5rem;
-}
-
-svg {
+  }
+  
+  svg {
     width: 20px;
     height: 20px;
-}
-
-#search-icon {
+  }
+  
+  #search-icon {
     border-radius: 5px;
-}
+  }
+  
+  .input-group-button {
+      margin-left: 70px;
+  }
 
-.input-group-button {
-    margin-left: 70px;
-}
-
-
+  
 /* original css */
 a {
     font-weight: 600;
@@ -82,8 +82,7 @@ h1 {
     color: white;
     font-weight: 600;
     text-align: center;
-}
-
+} 
 /* original css */
 h1,
 .nav-link {
@@ -96,9 +95,8 @@ footer {
     margin: 0;
     width: 100%;
     background-color: #027BCE;
-
+    
 }
-
 /*Jess stop*/
 
 /*ivan start */
@@ -124,6 +122,10 @@ button:hover {
 
 /*Jess start*/
 
+/*Moile*/
+
+/*Jess start*/
+
 
 @media only screen and (max-width: 600px) {
     #carouselExampleControls {
@@ -139,11 +141,10 @@ button:hover {
         width: 90%;
     }
 
-}
+  }
+  /*Jess stop*/
 
-/*Jess stop*/
-
-/* malcolm
+  /* malcolm
   css additions from anthony:
   height: 500;
   width: 500;
