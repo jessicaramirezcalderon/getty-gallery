@@ -1,3 +1,6 @@
+//Check whether or not someone has already clicked for the first time
+let alreadyLoaded = false;
+
 //Foundation search bar
 $(document).foundation();
 $('.search').on('click', function (event) {
@@ -8,38 +11,19 @@ $('.search').on('click', function (event) {
   }
 });
 
-
-
-
-
-
 //grab the input data before using it
-var cityInput = $("#city-input");
-var cityName = "";
-var cityNameTag = $("<h3>");
-var tempTag = $("<p>");
-var humidityTag = $("<p>");
-var windTag = $("<p>");
-var currentWeather = $("#current-weather");
+const cityInput = $("#city-input");
 
+// create function that states pulls id of city button, calls API to gather images and append to carousel
+function displayImg(e) {
 
-// function for current weather API call
-function currentWeatherAPI(e) {
-  // stop search unless user presses the Enter key. The Keycode for "enter" is the numer 13 - thanks Jess!
+  //stop search unless user presses the enter key. The Keycode for "enter" is the numer 13
   if (e.keyCode !== 13) {
     return;
   }
 
-  // store the input info from cityInput as value to be passed in function below
-  cityName = cityInput.val();
-  console.log("city searched: " + cityName);
-
-  // building out container for weather info
-  currentWeather.addClass("current-weather");
-  // assign cityName to h3 tag
-  $(cityNameTag).text(cityName);
-  // append h3 tag to page
-  currentWeather.append(cityNameTag);
+  // store the input info from line 23 as value to be passed in function below
+  const cityName = cityInput.val();
 
   var apiKey = "c7cde66d595fb98577da25bd96a3df85";
   // query URL for city weather
@@ -51,38 +35,16 @@ function currentWeatherAPI(e) {
     method: "GET"
   })
     .then(function (response) {
-      console.log("weather url - " + queryURL);
-      // variable to get icon for todays weather
-      var todayIcon = response.weather[0].icon;
-      // assign value to todayIconURL
-      var todayIconURL = "https://openweathermap.org/img/wn/" + todayIcon + ".png";
-      // append todayIconURL next to cityNameTag
-      $(cityNameTag).append("<img src =" + todayIconURL + ">");
+      //Insert onto the elements defined in loop below the images once the first load occurs
+      if (alreadyLoaded) {
+        $("img.d-block").each(function (i) {
+          $(this).attr("src", response[i].urls.regular);
+          $(this).attr("alt", response[i].location.city);
 
-      // create variables and assign weather info as text
-      var tempF = Math.floor((response.main.temp - 273.15) * 1.8 + 32);
-      $(tempTag).text("Temperature: " + tempF + "°F");
-      var humidity = response.main.humidity
-      $(humidityTag).text("Humidity: " + humidity + "%");
-      var windSpeed = response.wind.speed;
-      $(windTag).text("Wind Speed: " + windSpeed + " MPH");
+          console.log(response[i].urls);
+        });
 
-      $(currentWeather).append(tempTag, humidityTag, windTag);
-
-      // call function to retrieve city images
-      displayImg();
-
-    });
-}
-
-// create function that pulls id of city button, calls API to gather images and append to carousel
-function displayImg() {
-
-  // clear div containing images
-  $(".carousel-inner").empty();
-
-  // API Query call
-  var queryURL = "https://api.unsplash.com/photos/random?query=" + cityName + "&count=10&orientation=landscape&client_id=duheouvYAukp2dG98jzVI1Y2VnHKe-PnTeWRmeKt5ss";
+      }
 
   $.ajax({
     url: queryURL,
@@ -111,7 +73,6 @@ function displayImg() {
         var firstImgTag = $("#0").addClass("active");
       }
 
-      // currentWeatherAPI();
     });
 }
 
