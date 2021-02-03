@@ -2,10 +2,8 @@ alert("Hello");
 
 //Check whether or not someone has already clicked for the first time
 let alreadyLoaded = false;
-​
-​
-​
-​
+//minor change to check file status
+
 //Foundation search bar
 $(document).foundation();
 $('.search')
