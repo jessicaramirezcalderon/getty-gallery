@@ -1,26 +1,23 @@
-/*Jess*/
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;900&display=swap');
 
 body {
-    /* {Malcolm} testing placement */
+    /* Testing placement */
     background-color: black;
 }
 
-/* {Malcolm} Header/Title */
-/* {Jess} */
+/* Header/Title */
 h1 {
     color: white;
     font-weight: 600;
     text-align: center;
 } 
 
-/* {Jess} */
 h1,
 .nav-link {
     font-family: 'Noto Sans SC', sans-serif;
 }
 
-/* {Malcolm} Reorganized Navbar CSS*/
+/*Reorganized Navbar CSS*/
 .btn-outline-warning {
     /* {Ivan's Knicks color scheme} */
     border-color: orange;
@@ -44,7 +41,6 @@ button:hover {
     margin-top: 30px;
 }
 
-/* {Jess} */
 .search-field {
     width: 0;
     height: 40px;
@@ -55,38 +51,33 @@ button:hover {
     transition: all 0.5s ease;
 }
 
-/* {Jess} */
 .top-nav {
     text-align: center;
     justify-content: center;
     background-color: #027BCE;
 } 
 
-/* {Jess} */
 nav {
     width: 60%;
     margin: auto auto auto auto;
     border-radius: 5px;
 }
 
-/* {Jess} */
 .searchBar {
     margin: 0px auto;
 }
 
-/* {Jess} */
 svg {
     width: 20px;
     height: 20px;
 }
 
-/* {Jess} */
 .expand-search {
     width: 95%;
     padding: .5rem;
 }
 
-/* {Malcolm/Ernesto} Modifying local storage bar */
+/*Modifying local storage bar */
 #input-storage {
     /* background-color: violet; */
 }
@@ -98,10 +89,10 @@ svg {
     padding: 20px;
 }
 
-/* {Malcolm} Reorganized "Presentation" container CSS*/
-/* {Malcolm} Working on making the images and the weather card appear side by side */
+/*Reorganized "Presentation" container CSS*/
+/*Working on making the images and the weather card appear side by side */
 #presentation{
-    /* {Malcolm} Testing background color of container, when the two IDs dont fit the container the gold background shows */
+    /* Testing background color of container, when the two IDs dont fit the container the gold background shows */
     /* background-color: gold; */
     width: 1800px;
     height: 700px;
@@ -109,7 +100,7 @@ svg {
     margin: 0px 100px;
 }
 
-/* {Malcolm} matched both ID and Class. Deleted a few conflicting code */
+/* matched both ID and Class. Deleted a few conflicting code */
 .current-weather,
 #currrent-weather {
     /* background-color: red; */
@@ -120,7 +111,7 @@ svg {
     float: left;
 }
 
-/* {Malcolm} Created h3 and p tag CSS to edit the font and alignement */
+/* Created h3 and p tag CSS to edit the font and alignement */
 h3 {
     text-align: center;
 }
@@ -129,14 +120,7 @@ p {
     margin-left: 50px;
 }
 
-/* {Malcolm} Not needed since we are most likely deleting the card */
-/* .card {
-    height: 700px;
-    width: 50%;
-    float: left;
-} */
-
-/* {Malcolm} Placed the d block and w100 together because they didnt seem to move the whole card without eachother  */
+/* Placed the d block and w100 together because they didnt seem to move the whole card without eachother  */
 .d-block,
 .w-100 {
     height: 700px;
