@@ -32,7 +32,7 @@
 
         <!--Foundation Search Bar-->
         <nav>
-            <div class="input-group searchbar">
+            <div class="input-group searchBar">
                 <div class="input-group-button">
                     <button id="search-icon" class="button search"><svg width="100" height="100" viewBox="0 0 100 100">
                             <path fill="#FFF" fill-rule="evenodd"
@@ -42,44 +42,54 @@
                 </div>
                 <input id="city-input" class="input-field search-field" type="search" placeholder="Enter a City Name" />
             </div>
+        </div>
+        <div id="input-storage"></div>
         </nav>
 
-        <!--Entire Gallery -->
-        <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel" data-bs-interval=false>
+    <!-- {Malcolm} Container for the weather card and the images -->
+    <div id="presentation">
 
-            <!-- todays weather -->
-            <div class="weather">
-                <!-- current weather -->
-                <div class="row">
-                    <div id="current-weather"></div>
+        <div id="current-weather">
+
+            <!-- {Malcolm} Deleted/commented the card out because the div will be filled in anyways! -->
+            <!-- <div class="card">
+                <div class="card-body">
+                  <h5 class="card-title">Card title</h5>
+                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                  <a href="#" class="btn btn-primary">Go somewhere</a>
                 </div>
-            </div>
+            </div> -->
 
-            <!-- gallery -->
+        </div>
+
+        <!-- {Malcolm} Container for images! -->
+        <div id="carouselExampleControls" class="carousel slide col-6" data-bs-ride="carousel" data-bs-interval=false>
+            <!-- {Malcolm} Images will be placed in inner class-->
             <div class="carousel-inner">
+    
                 <div class="carousel-item active">
                     <img src="https://images.unsplash.com/photo-1470470558828-e00ad9dbbc13" class="d-block w-100"
                         alt="where do you want to go">
                 </div>
             </div>
-
+    
             <!-- Previous and Next arrows for carousel -->
             <a class="carousel-control-prev gallery" href="#carouselExampleControls" role="button" data-bs-slide="prev">
                 <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                 <span class="visually-hidden">Previous</span>
             </a>
-
             <a class="carousel-control-next gallery" href="#carouselExampleControls" role="button" data-bs-slide="next">
                 <span class="carousel-control-next-icon" aria-hidden="true"></span>
                 <span class="visually-hidden">Next</span>
             </a>
-
+    
         </div>
- 
-        <!-- Ernesto start, added footer to bottom of page -->
-        <div class="footer-copyright bg-primary text-light text-center py-3 mt-5">© 2021 Copyright
-            <a id="btTag" href="https://mdbootstrap.com/"></a>
-          </div>
+    </div>    
+
+    <!-- {Malcolm} Lets create a footer!!! Any ideas??!? -->
+    <!--Commented out the footer because it really serves no purpose being empty-->
+    <!--<footer class="fixed-bottom"></footer>-->
+
 
         <script src="https://code.jquery.com/jquery-3.5.1.js"
             integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>

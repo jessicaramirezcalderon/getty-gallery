@@ -1,179 +1,156 @@
-/*Jess start*/
+/*Jess*/
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;900&display=swap');
 
-/* original css*/
 body {
-    /* Ernesto start, changed background color */
-    background-color: rgb(180, 221, 240)
+    /* {Malcolm} testing placement */
+    background-color: black;
 }
 
-#carouselExampleControls {
-    width: 50%;
-    margin: 50px auto 100px auto;
+/* {Malcolm} Header/Title */
+/* {Jess} */
+h1 {
+    color: white;
+    font-weight: 600;
+    text-align: center;
+} 
+
+/* {Jess} */
+h1,
+.nav-link {
+    font-family: 'Noto Sans SC', sans-serif;
 }
 
-/* original css */
+/* {Malcolm} Reorganized Navbar CSS*/
+.btn-outline-warning {
+    /* {Ivan's Knicks color scheme} */
+    border-color: orange;
+    background-color: cornflowerblue;
+}
+.navbar-light .navbar-nav .nav-link {
+    /* {Ivan's Knicks color scheme} */
+    color: black;
+    font-weight: bold;
+    margin-right: 10px;
+}
+button:hover {
+    /* {Ivan's Knicks color scheme} */
+    background-color: orange !important;
+    border-color: cornflowerblue !important;
+}
+
 #navbarNavAltMarkup {
+    /* {Ivan's Knicks color scheme} */
     justify-content: center;
     margin-top: 30px;
 }
 
-/* original css */
+/* {Jess} */
+.search-field {
+    width: 0;
+    height: 40px;
+    margin: 0;
+    padding: 0;
+    border-radius: 50px;
+    border: none;
+    transition: all 0.5s ease;
+}
+
+/* {Jess} */
 .top-nav {
     text-align: center;
     justify-content: center;
     background-color: #027BCE;
 }
 
-
+/* {Jess} */
 nav {
     width: 60%;
-    margin: 0 auto;
+    margin: auto auto auto auto;
     border-radius: 5px;
 }
 
-/*foundation search bar*/
-
-.searchbar {
-    margin: 1rem;
-    margin: 0;
-    padding: 0;
-    border-radius: 50px;
-    transition: all 0.5s ease;
+/* {Jess} */
+.searchBar {
+    margin: 0px auto;
 }
 
-.expand-search {
-    width: 80%;
-    max-width: calc(80% - 3rem);
-    padding: .5rem;
-}
-
+/* {Jess} */
 svg {
     width: 20px;
     height: 20px;
 }
 
-#search-icon {
-    border-radius: 5px;
+/* {Jess} */
+.expand-search {
+    width: 95%;
+    padding: .5rem;
 }
 
-.input-group-button {
-    margin-left: 70px;
+/* {Malcolm/Ernesto} Modifying local storage bar */
+/* #input-storage{
+    /* background-color: violet; */
+/* } */ */
+.badge {
+    background-color: green;
+    font-size: 20px;
+    padding: 20px;
 }
 
-
-/* original css */
-a {
-    font-weight: 600;
+/* {Malcolm} Reorganized "Presentation" container CSS*/
+/* {Malcolm} Working on making the images and the weather card appear side by side */
+#presentation{
+    /* {Malcolm} Testing background color of container, when the two IDs dont fit the container the gold background shows */
+    background-color: gold;
+    width: 1800px;
+    height: 700px;
+    position: relative;
+    margin: 0px 100px;
 }
 
-/* original css */
-.nav-link {
-    color: black;
+/* {Malcolm} matched both ID and Class. Deleted a few conflicting code */
+.current-weather,
+#currrent-weather {
+    background-color: red;
+    width: 500px;
+    margin: 250px;
+    height: auto;
+    float: left;
 }
 
-/* original css */
-h1 {
-    color: white;
-    font-weight: 600;
+/* {Malcolm} Created h3 and p tag CSS to edit the font and alignement */
+h3 {
     text-align: center;
 }
-
-
-/* original css */
-h1,
-.nav-link {
-    font-family: 'Noto Sans SC', sans-serif;
+p {
+    font-size: 30px;
 }
 
-/* original css */
-footer {
-    height: 30px;
-    margin: 0;
-    width: 100%;
-    background-color: #027BCE;
+/* {Malcolm} Not needed since we are most likely deleting the card */
+/* .card {
+    height: 700px;
+    width: 50%;
+    float: left;
+} */
 
+/* {Malcolm} Placed the d block and w100 together because they didnt seem to move the whole card without eachother  */
+.d-block,
+.w-100 {
+    height: 700px;
+    width: 900px;
+    /* will test which carousel or d-block floating should float right  */
+    float: right;
 }
 
-/*Jess stop*/
-
-/*ivan start */
-/* modifying buttons */
-.btn-outline-warning {
-    border-color: orange;
-    background-color: cornflowerblue;
+#carouselExampleControls {
+    float: right;
+    width: 800px;
 }
 
-.navbar-light .navbar-nav .nav-link {
-    color: black;
-    font-weight: bold;
-    margin-right: 10px;
-}
+/* END */
+  
 
-button:hover {
-    background-color: orange !important;
-    border-color: cornflowerblue !important;
-}
-
-.current-weather {
-    margin: 15px;
-    border: solid 1px #ccc;
-    border-radius: 5px;
-    padding: 30px;
-    width: 100%;
-    line-height: 50px;
-    letter-spacing: 1px;
-}
-
-/* ivan stop
-/*Mobile*/
-
-/*Jess start*/
+  
 
 
-@media only screen and (max-width: 600px) {
-    #carouselExampleControls {
-        width: 90%;
-        margin: 30px auto;
-    }
-
-    .input-group-button {
-        margin-left: 0px;
-    }
-
-    .expand-search {
-        width: 90%;
-    }
-}
-
-/* Ernesto start, changed color of text in footer to white */
-@media only screen and (max-width: 800px) {
-    body {
-        background-color: bisque;
-    }
-   .top-nav, svg{
-        background-color: rgb(6, 175, 175);
-    }
-    .bg-primary, button{
-        background-color: rgb(6, 175, 175) !important;
-    }
-}
 
 
-/* Ernesto start, changed color of text in footer to white */
-#btTag {
-    color: white;
-
-}
-
-
-/*Jess stop*/
-
-/* malcolm
-  css additions from anthony:
-  height: 500;
-  width: 500;
-  background-position: center;
-  background-size: contain; 
-  background-repeat: no-repeat;
-  use js to inject the style  */

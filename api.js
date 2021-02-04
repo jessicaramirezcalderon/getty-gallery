@@ -18,6 +18,9 @@ var humidityTag = $("<p>");
 var windTag = $("<p>");
 var currentWeather = $("#current-weather");
 
+//Local storage
+const storedSearch = localStorage.getItem("list");
+const searchList = storedSearch ? JSON.parse(storedSearch) : []
 
 // function for current weather API call
 function currentWeatherAPI(e) {
@@ -63,11 +66,11 @@ function currentWeatherAPI(e) {
       var windSpeed = response.wind.speed;
       $(windTag).text("Wind Speed: " + windSpeed + " MPH");
 
+      // append weaether info onto page
       $(currentWeather).append(tempTag, humidityTag, windTag);
 
       // call function to retrieve city images
       displayImg();
-
     });
 }
 
@@ -77,27 +80,27 @@ function displayImg() {
   // clear div containing images
   $(".carousel-inner").empty();
 
+  var apiKey = "duheouvYAukp2dG98jzVI1Y2VnHKe-PnTeWRmeKt5ss";
   // API Query call
-  var queryURL = "https://api.unsplash.com/photos/random?query=" + cityName + "&count=10&orientation=landscape&client_id=duheouvYAukp2dG98jzVI1Y2VnHKe-PnTeWRmeKt5ss";
+  var queryURL = "https://api.unsplash.com/search/photos?query=" + cityName + "&count=10&orientation=landscape&client_id=" + apiKey;
 
   $.ajax({
     url: queryURL,
     method: "GET"
   })
-    // Promise function
     .then(function (response) {
       console.log("unsplash url - " + queryURL);
 
       // for-loop to create tags for images and append to carousel
-      for (var i = 0; i < response.length; i++) {
+      for (var i = 0; i < response.results.length; i++) {
         //create div tag that will contain img and append carousel-item classes
         var divImg = $("<div>").addClass("carousel-item");
         divImg.attr("id", i);
 
         //create img tag that will contain city img and append d-block w-100 classes
         var cityImg = $("<img>").addClass("d-block w-100");
-        $(cityImg).attr("src", `${response[i].urls.regular}`);
-        $(cityImg).attr("alt", `${response[i].location.city}`);
+        $(cityImg).attr("src", `${response.results[i].urls.regular}`);
+        $(cityImg).attr("alt", cityName);
 
         // append cityImg to divImg
         $(divImg).append(cityImg);
@@ -107,7 +110,23 @@ function displayImg() {
         var firstImgTag = $("#0").addClass("active");
       }
 
-      // currentWeatherAPI();
+      //Push the input into local storage
+      searchList.push(cityName);
+      localStorage.setItem("list", JSON.stringify(searchList));
+      const listGroup = $(".badge");
+
+      //Limit number of stored items on the page to 9
+      // {Malcolm} Increased the number of city inputs to a total of 10 so we can make it aesthetically match the search bar!
+      if (listGroup.length > 9) {
+        $(listGroup.get(9)).remove();
+      }
+
+      // {Malcolm} Deleted the bg light and background so we can add color to the pill
+      $("#input-storage").prepend(`<button class="badge rounded-pill">${cityName}</button>`);
+      searchList.reverse().slice(0, 5).forEach((citySearch) => {
+        $("input-storage").append(`<button class="badge rounded-pill">${citySearch}</button>`);
+      });
+
     });
 }
 
