@@ -3,7 +3,8 @@
 
 body {
     /* {Malcolm} testing placement */
-    background-color: black;
+    /* {Ernesto} Changed Background color */
+    background-color: rgba(183, 227, 245, 0.87)
 }
 
 /* {Malcolm} Header/Title */
@@ -12,7 +13,7 @@ h1 {
     color: white;
     font-weight: 600;
     text-align: center;
-} 
+}
 
 /* {Jess} */
 h1,
@@ -26,12 +27,14 @@ h1,
     border-color: orange;
     background-color: cornflowerblue;
 }
+
 .navbar-light .navbar-nav .nav-link {
     /* {Ivan's Knicks color scheme} */
     color: black;
     font-weight: bold;
     margin-right: 10px;
 }
+
 button:hover {
     /* {Ivan's Knicks color scheme} */
     background-color: orange !important;
@@ -60,6 +63,7 @@ button:hover {
     text-align: center;
     justify-content: center;
     background-color: #027BCE;
+
 }
 
 /* {Jess} */
@@ -89,8 +93,8 @@ svg {
 /* {Malcolm/Ernesto} Modifying local storage bar */
 /* #input-storage{
     /* background-color: violet; */
-/* } */ */
-.badge {
+/* } */
+*/ .badge {
     background-color: green;
     font-size: 20px;
     padding: 20px;
@@ -98,19 +102,20 @@ svg {
 
 /* {Malcolm} Reorganized "Presentation" container CSS*/
 /* {Malcolm} Working on making the images and the weather card appear side by side */
-#presentation{
+/* {Ernesto} Adjusted Height, Width, and Background Color */
+#presentation {
     /* {Malcolm} Testing background color of container, when the two IDs dont fit the container the gold background shows */
-    background-color: gold;
-    width: 1800px;
-    height: 700px;
-    position: relative;
-    margin: 0px 100px;
-}
+    background-color: rgb(243, 215, 163);
+    width: 1600px;
+    height: 600px;
+     position: relative; 
+
+    }
 
 /* {Malcolm} matched both ID and Class. Deleted a few conflicting code */
 .current-weather,
 #currrent-weather {
-    background-color: red;
+    background-color: rgba(183, 227, 245, 0.87);
     width: 500px;
     margin: 250px;
     height: auto;
@@ -121,6 +126,7 @@ svg {
 h3 {
     text-align: center;
 }
+
 p {
     font-size: 30px;
 }
@@ -133,12 +139,15 @@ p {
 } */
 
 /* {Malcolm} Placed the d block and w100 together because they didnt seem to move the whole card without eachother  */
+/* {Ernesto} Adjusted Height */
 .d-block,
 .w-100 {
-    height: 700px;
+    height: 600px;
     width: 900px;
     /* will test which carousel or d-block floating should float right  */
-    float: right;
+    float: right;    
+    padding-bottom: 20;
+    
 }
 
 #carouselExampleControls {
@@ -146,11 +155,44 @@ p {
     width: 800px;
 }
 
+/* {Ernesto} changing background colors when responsive */
+@media screen and (max-width:992px) {
+
+    .top-nav,
+    svg,
+    button,
+    .navbar,
+    .bg-primary {
+        background-color: rgb(32, 187, 187) !important;
+    }
+
+    body {
+        background-color: rgb(243, 226, 195);
+    }
+
+    #presentation {
+        background-color: rgb(32, 187, 187);
+        margin-bottom: 20%;
+        margin-top: 20%;
+        height: 558px;
+    }
+
+    .d-block,
+    .w-100 {
+        height: 558px;
+    }
+
+    .current-weather,
+    #currrent-weather {
+        background-color: rgb(243, 226, 195);
+    }
+}
+
+.btTag,
+.wrapper {
+    /* position: relative; */
+    margin-top: 7%;
+    background-color: #027BCE !important;
+}
+
 /* END */
-  
-
-  
-
-
-
-
