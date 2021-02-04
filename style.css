@@ -108,9 +108,10 @@ svg {
     background-color: rgb(243, 215, 163);
     width: 1600px;
     height: 600px;
-     position: relative; 
-
-    }
+    position: relative;
+    
+    margin: 0px 100px;
+}
 
 /* {Malcolm} matched both ID and Class. Deleted a few conflicting code */
 .current-weather,
@@ -145,9 +146,8 @@ p {
     height: 600px;
     width: 900px;
     /* will test which carousel or d-block floating should float right  */
-    float: right;    
+    float: right;
     padding-bottom: 20;
-    
 }
 
 #carouselExampleControls {
