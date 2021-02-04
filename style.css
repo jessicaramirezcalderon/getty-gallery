@@ -86,6 +86,16 @@ svg {
     padding: .5rem;
 }
 
+/* {Malcolm/Ernesto} Modifying local storage bar */
+#input-storage {
+    /* background-color: violet; */
+}
+.badge {
+    background-color: green;
+    font-size: 20px;
+    padding: 20px;
+}
+
 /* {Malcolm} Reorganized "Presentation" container CSS*/
 /* {Malcolm} Working on making the images and the weather card appear side by side */
 #presentation{
