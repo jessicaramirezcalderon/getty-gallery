@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;900&display=swap');
 
 body {
-    /* Testing placement */
+    /*testing placement */
     background-color: black;
 }
 
@@ -17,7 +17,7 @@ h1,
     font-family: 'Noto Sans SC', sans-serif;
 }
 
-/*Reorganized Navbar CSS*/
+/* Reorganized Navbar CSS*/
 .btn-outline-warning {
     /* {Ivan's Knicks color scheme} */
     border-color: orange;
@@ -48,7 +48,7 @@ button:hover {
     padding: 0;
     border-radius: 50px;
     border: none;
-    transition: all 0.5s ease;
+    transition: all 1s ease;
 }
 
 .top-nav {
@@ -57,9 +57,10 @@ button:hover {
     background-color: #027BCE;
 } 
 
+
 nav {
     width: 60%;
-    margin: auto auto auto auto;
+    margin: auto;
     border-radius: 5px;
 }
 
@@ -77,7 +78,7 @@ svg {
     padding: .5rem;
 }
 
-/*Modifying local storage bar */
+/* Modifying local storage bar */
 #input-storage {
     /* background-color: violet; */
 }
@@ -89,10 +90,10 @@ svg {
     padding: 20px;
 }
 
-/*Reorganized "Presentation" container CSS*/
-/*Working on making the images and the weather card appear side by side */
+/* Reorganized "Presentation" container CSS*/
+/* Working on making the images and the weather card appear side by side */
 #presentation{
-    /* Testing background color of container, when the two IDs dont fit the container the gold background shows */
+    /*  Testing background color of container, when the two IDs dont fit the container the gold background shows */
     /* background-color: gold; */
     width: 1800px;
     height: 700px;
@@ -120,6 +121,8 @@ p {
     margin-left: 50px;
 }
 
+
+
 /* Placed the d block and w100 together because they didnt seem to move the whole card without eachother  */
 .d-block,
 .w-100 {
@@ -136,7 +139,36 @@ p {
 
 /* END */
   
-
+@media only screen and (min-width: 600px) {
+    /* For tablets: */
+    .col-s-1 {width: 8.33%;}
+    .col-s-2 {width: 16.66%;}
+    .col-s-3 {width: 25%;}
+    .col-s-4 {width: 33.33%;}
+    .col-s-5 {width: 41.66%;}
+    .col-s-6 {width: 50%;}
+    .col-s-7 {width: 58.33%;}
+    .col-s-8 {width: 66.66%;}
+    .col-s-9 {width: 75%;}
+    .col-s-10 {width: 83.33%;}
+    .col-s-11 {width: 91.66%;}
+    .col-s-12 {width: 100%;}
+  }
+  @media only screen and (min-width: 768px) {
+    /* For desktop: */
+    .col-1 {width: 8.33%;}
+    .col-2 {width: 16.66%;}
+    .col-3 {width: 25%;}
+    .col-4 {width: 33.33%;}
+    .col-5 {width: 41.66%;}
+    .col-6 {width: 50%;}
+    .col-7 {width: 58.33%;}
+    .col-8 {width: 66.66%;}
+    .col-9 {width: 75%;}
+    .col-10 {width: 83.33%;}
+    .col-11 {width: 91.66%;}
+    .col-12 {width: 100%;}
+  }
   
 
 
