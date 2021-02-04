@@ -9,10 +9,6 @@ $('.search').on('click', function (event) {
 });
 
 
-
-
-
-
 //grab the input data before using it
 var cityInput = $("#city-input");
 var cityName = "";
