@@ -91,7 +91,9 @@ svg {
     /* background-color: violet; */
 }
 .badge {
-    background-color: green;
+    /* background-color: green; */
+    background-color: #027BCE;
+
     font-size: 20px;
     padding: 20px;
 }
@@ -100,7 +102,7 @@ svg {
 /* {Malcolm} Working on making the images and the weather card appear side by side */
 #presentation{
     /* {Malcolm} Testing background color of container, when the two IDs dont fit the container the gold background shows */
-    background-color: gold;
+    /* background-color: gold; */
     width: 1800px;
     height: 700px;
     position: relative;
@@ -110,9 +112,10 @@ svg {
 /* {Malcolm} matched both ID and Class. Deleted a few conflicting code */
 .current-weather,
 #currrent-weather {
-    background-color: red;
-    width: 500px;
-    margin: 250px;
+    /* background-color: red; */
+    background-color: #027BCE;
+    width: 600px;
+    margin: 200px;
     height: auto;
     float: left;
 }
@@ -122,7 +125,8 @@ h3 {
     text-align: center;
 }
 p {
-    font-size: 30px;
+    font-size: 40px;
+    margin-left: 50px;
 }
 
 /* {Malcolm} Not needed since we are most likely deleting the card */
