@@ -110,22 +110,27 @@ function displayImg() {
         var firstImgTag = $("#0").addClass("active");
       }
 
-      //Push the input into local storage
-      searchList.push(cityName);
-      localStorage.setItem("list", JSON.stringify(searchList));
-      const listGroup = $(".badge");
-
-      //Limit number of stored items on the page tp 5
-      if (listGroup.length > 4) {
-        $(listGroup.get(4)).remove();
-      }
-
-      $("#input-storage").prepend(`<button class="badge rounded-pill bg-light text-dark">${cityName}</button>`);
-      searchList.reverse().slice(0, 5).forEach((citySearch) => {
-        $("input-storage").append(`<button class="badge rounded-pill bg-light text-dark">${citySearch}</button>`);
-      });
+      storeData();
 
     });
+}
+
+// function for local storage :)
+function storeData() {
+  // Push the input into local storage
+  searchList.push(cityName);
+  localStorage.setItem("list", JSON.stringify(searchList));
+  const listGroup = $(".badge");
+
+  //Limit number of stored items on the page to 5
+  if (listGroup.length > 4) {
+    $(listGroup.get(4)).remove();
+  }
+
+  $("#input-storage").prepend(`<button class="badge rounded-pill bg-light text-dark">${cityName}</button>`);
+  searchList.reverse().slice(0, 5).forEach((citySearch) => {
+    $("input-storage").append(`<button class="badge rounded-pill bg-light text-dark">${citySearch}</button>`);
+  });
 }
 
 // user clicks Enter, function kicks off to get current weather and then city images
