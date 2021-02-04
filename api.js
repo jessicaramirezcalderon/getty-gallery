@@ -116,7 +116,7 @@ function displayImg() {
       const listGroup = $(".badge");
 
       //Limit number of stored items on the page to 9
-      // {Malcolm} Increased the number of city inputs to a total of 10 so we can make it aesthetically match the search bar!
+      // 119{Malcolm} Increased the number of city inputs to a total of 10 so we can make it aesthetically match the search bar!
       if (listGroup.length > 9) {
         $(listGroup.get(9)).remove();
       }
