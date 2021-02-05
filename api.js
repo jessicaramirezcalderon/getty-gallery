@@ -18,6 +18,24 @@ var humidityTag = $("<p>");
 var windTag = $("<p>");
 var currentWeather = $("#current-weather");
 
+const weaBlock = $("#weather-block");
+const inputSto = $("#input-storage");
+
+/*
+Was tring to insert the entire iframe but getting undefined line 23 error so will leave it for later. I did look very cute when I added it in the html. You can uncomment it in the html to see it-->
+const gifBlock = $(document.createElement("iframe"));
+gifBlock.attr(title, "Conditions");
+gifBlock.attr(width, "100");
+gifBlock.attr(height, "50");
+gifBlock.attr(src, "https://giphy.com/embed/SAC0wTRQYO2Y0");
+gifBlock.attr(frameborder, "0");
+gifBlock.addClass("giphy-embed");*/
+
+
+
+
+
+
 //Local storage
 const storedSearch = localStorage.getItem("list");
 const searchList = storedSearch ? JSON.parse(storedSearch) : []
@@ -67,7 +85,9 @@ function currentWeatherAPI(e) {
       $(windTag).text("Wind Speed: " + windSpeed + " MPH");
 
       // append weaether info onto page
-      $(currentWeather).append(tempTag, humidityTag, windTag);
+      $(currentWeather).append(tempTag, humidityTag, windTag,);
+      weaBlock.show();
+      inputSto.show();
 
       // call function to retrieve city images
       displayImg();
@@ -120,25 +140,18 @@ function storeData() {
   // Push the input into local storage
   searchList.push(cityName);
   localStorage.setItem("list", JSON.stringify(searchList));
-  const listGroup = $(".badge");
+  const listGroup = $(".list-group-item");
 
   //Limit number of stored items on the page to 5
   if (listGroup.length > 4) {
     $(listGroup.get(4)).remove();
   }
 
-  $("#input-storage").prepend(`<button class="badge rounded-pill bg-light text-dark">${cityName}</button>`);
+  $("#input-storage").prepend(`<li class="list-group-item list-group-item-primary mb-1">${cityName}</li>`);
   searchList.reverse().slice(0, 5).forEach((citySearch) => {
-    $("input-storage").append(`<button class="badge rounded-pill bg-light text-dark">${citySearch}</button>`);
+    $("input-storage").append(`<li class="list-group-item list-group-item-primary mb-1">${citySearch}</li>`);
   });
 }
 
 // user clicks Enter, function kicks off to get current weather and then city images
 cityInput.on("keypress", currentWeatherAPI);
-
-
-/*Added the functionality to load different images for each city. Added if and else statements for each state
-Commented out some console logs
-Feb 01 Added the search functionality and search bar. Also eliminated the on click event since we no longer need it.
-Jessica
-*/

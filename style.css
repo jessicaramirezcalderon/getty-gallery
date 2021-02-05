@@ -3,12 +3,11 @@
 
 /* original css*/
 body {
-    background-color: white;
+    background-color: rgba(58,68,93);
 }
 
 #carouselExampleControls {
-    width: 50%;
-    margin: 50px auto 100px auto;
+    /*margin: 10px*/
 }
 
 /* original css */
@@ -21,13 +20,12 @@ body {
 .top-nav {
     text-align: center;
     justify-content: center;
-    background-color: #027BCE;
+    border-bottom: 1px solid white;
 } 
-
 
 nav {
     width: 60%;
-    margin: 0 auto;
+    margin: 40px auto;
     border-radius: 5px;
 }
 
@@ -35,6 +33,7 @@ nav {
 
 .searchbar {
     margin: 1rem;
+    justify-content: center;
   }
   
   .search-field {
@@ -60,48 +59,81 @@ nav {
   
   #search-icon {
     border-radius: 5px;
+    background-color: #DE3C4B;
   }
   
+  /*
   .input-group-button {
       margin-left: 70px;
-  }
+  }*/
 
   #input-storage {
-    background-color: #027BCE;
-    width: 50%;
-    height: 50px;
-    /*display: none;*/
+    height: auto;
+    display: none;
     padding: 10px;
-    margin: 20px auto;
+    border-radius: 5px;
+    background-color: rgba(255, 255, 255, 0.2);
+    margin-right: 1%;
+  }
+
+  #weather-block{
+      display: none;
+  }
+
+  .first-row {
+    margin: 5%;
+    justify-content: space-evenly;
+    flex-direction: row-reverse;
+    align-items: end;
+  }
+
+  .weather {
+    display: block;
+    background-color: rgba(255, 255, 255, 0.2);
+    color: white;
+    margin-right: 1%;
     border-radius: 5px;
   }
 
+  #current-weather {
+    margin: 15px;
+    border: solid 1px #ccc;
+    border-radius: 5px;
+    padding: 10px;
+    letter-spacing: 1px;
+}
 
+  .list-group {
+      margin-left: 0;
+  }
 
+  .gal-row {
+    margin-top: 48px;
+}
   
-/* original css */
+
 a {
     font-weight: 600;
 }
 
-/* original css */
+
 .nav-link {
     color: black;
 }
 
-/* original css */
+
 h1 {
     color: white;
     font-weight: 600;
     text-align: center;
 } 
-/* original css */
+
 h1,
 .nav-link {
     font-family: 'Noto Sans SC', sans-serif;
 }
 
-/* original css */
+
 footer {
     height: 30px;
     margin: 0;
@@ -109,7 +141,7 @@ footer {
     background-color: #027BCE;
     
 }
-/*Jess stop*/
+
 
 /*ivan start */
 /* modifying buttons */
@@ -129,24 +161,44 @@ button:hover {
     border-color: cornflowerblue !important;
 }
 
-.current-weather {
-    margin: 15px;
-    border: solid 1px #ccc;
-    border-radius: 5px;
-    padding: 30px;
-    width: 100%;
-    line-height: 50px;
-    letter-spacing: 1px;
-}
+
 /* ivan stop
-/*Mobile*/
+/*Mobile and tablet*/
 
-/*Jess start*/
+@media only screen and (max-width: 1200px) and (min-width: 651px)  {
+
+    #input-storage, #weather-block {
+        margin-bottom: 20px;
+    }
+
+    .gal {
+        padding: 0;
+    }
+
+}
 
 
-@media only screen and (max-width: 600px) {
+
+
+@media only screen and (max-width: 650px) {
+
+    nav  {
+    width: 85%;
+
+    }
+
+    .searchbar {
+    margin: 20px auto;
+
+    }
+
+    #input-storage {
+        max-width: 100%;
+        margin-bottom: 8px;
+    }
+  
     #carouselExampleControls {
-        width: 90%;
+        /*width: 90%;*/
         margin: 30px auto;
     }
 
@@ -155,11 +207,17 @@ button:hover {
     }
 
     .expand-search {
-        width: 90%;
+       /* width: 90%;*/
+    }
+
+    .gal-row {
+        margin-left: 0;
+        margin-left: 0;
+        margin-top: 10px;
     }
 
   }
-  /*Jess stop*/
+
 
   /* malcolm
   css additions from anthony:
