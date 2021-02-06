@@ -2,17 +2,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;900&display=swap');
 
 body {
-    /* {Malcolm} testing placement */
-    /* {Ernesto} Changed Background color */
-    background-color: rgba(183, 227, 245, 0.87)
+    background-color: rgba(58,68,93);
 }
 
-/* {Malcolm} Header/Title */
-/* {Jess} */
-h1 {
-    color: white;
-    font-weight: 600;
-    text-align: center;
+#carouselExampleControls {
+    /*margin: 10px*/
 }
 
 /* {Jess} */
@@ -21,18 +15,17 @@ h1,
     font-family: 'Noto Sans SC', sans-serif;
 }
 
-/* {Malcolm} Reorganized Navbar CSS*/
-.btn-outline-warning {
-    /* {Ivan's Knicks color scheme} */
-    border-color: orange;
-    background-color: cornflowerblue;
-}
+/* original css */
+.top-nav {
+    text-align: center;
+    justify-content: center;
+    border-bottom: 1px solid white;
+} 
 
-.navbar-light .navbar-nav .nav-link {
-    /* {Ivan's Knicks color scheme} */
-    color: black;
-    font-weight: bold;
-    margin-right: 10px;
+nav {
+    width: 60%;
+    margin: 40px auto;
+    border-radius: 5px;
 }
 
 button:hover {
@@ -41,14 +34,12 @@ button:hover {
     border-color: cornflowerblue !important;
 }
 
-#navbarNavAltMarkup {
-    /* {Ivan's Knicks color scheme} */
+.searchbar {
+    margin: 1rem;
     justify-content: center;
-    margin-top: 30px;
-}
-
-/* {Jess} */
-.search-field {
+  }
+  
+  .search-field {
     width: 0;
     height: 40px;
     margin: 0;
@@ -56,77 +47,104 @@ button:hover {
     border-radius: 50px;
     border: none;
     transition: all 0.5s ease;
-}
-
-/* {Jess} */
-.top-nav {
-    text-align: center;
-    justify-content: center;
-    background-color: #027BCE;
-
-}
-
-/* {Jess} */
-nav {
-    width: 60%;
-    margin: auto auto auto auto;
-    border-radius: 5px;
-}
-
-/* {Jess} */
-.searchBar {
-    margin: 0px auto;
-}
-
-/* {Jess} */
-svg {
+  }
+  
+  .expand-search {
+    width: 80%;
+    max-width: calc(80% - 3rem);
+    padding: .5rem;
+  }
+  
+  svg {
     width: 20px;
     height: 20px;
-}
+  }
+  
+  #search-icon {
+    border-radius: 5px;
+    background-color: #DE3C4B;
+  }
+  
+  /*
+  .input-group-button {
+      margin-left: 70px;
+  }*/
 
-/* {Jess} */
-.expand-search {
-    width: 95%;
-    padding: .5rem;
-}
-
-/* {Malcolm/Ernesto} Modifying local storage bar */
-/* #input-storage{
-    /* background-color: violet; */
-/* } */
-*/ .badge {
-    background-color: green;
-    font-size: 20px;
-    padding: 20px;
-}
-
-/* {Malcolm} Reorganized "Presentation" container CSS*/
-/* {Malcolm} Working on making the images and the weather card appear side by side */
-/* {Ernesto} Adjusted Height, Width, and Background Color */
-#presentation {
-    /* {Malcolm} Testing background color of container, when the two IDs dont fit the container the gold background shows */
-    background-color: rgb(243, 215, 163);
-    width: 1600px;
-    height: 600px;
-    position: relative;
-    
-    margin: 0px 100px;
-}
-
-/* {Malcolm} matched both ID and Class. Deleted a few conflicting code */
-.current-weather,
-#currrent-weather {
-    background-color: rgba(183, 227, 245, 0.87);
-    width: 500px;
-    margin: 250px;
+  #input-storage {
     height: auto;
-    float: left;
+    display: none;
+    padding: 10px;
+    border-radius: 5px;
+    background-color: rgba(255, 255, 255, 0.2);
+    margin-right: 1%;
+  }
+
+  #weather-block{
+      display: none;
+  }
+
+  .first-row {
+    margin: 5%;
+    justify-content: space-evenly;
+    flex-direction: row-reverse;
+    align-items: end;
+  }
+
+  .weather {
+    display: block;
+    background-color: rgba(255, 255, 255, 0.2);
+    color: white;
+    margin-right: 1%;
+    border-radius: 5px;
+  }
+
+  #current-weather {
+    margin: 15px;
+    border: solid 1px #ccc;
+    border-radius: 5px;
+    padding: 10px;
+    letter-spacing: 1px;
 }
 
-/* {Malcolm} Created h3 and p tag CSS to edit the font and alignement */
-h3 {
-    text-align: center;
+  .list-group {
+      margin-left: 0;
+  }
+
+  .gal-row {
+    margin-top: 48px;
 }
+  
+
+a {
+    font-weight: 600;
+}
+
+
+.nav-link {
+    color: black;
+}
+
+
+h1 {
+    color: white;
+    font-weight: 600;
+    text-align: center;
+} 
+
+h1,
+.nav-link {
+    font-family: 'Noto Sans SC', sans-serif;
+}
+
+
+footer {
+    height: 30px;
+    margin: 0;
+    width: 100%;
+    background-color: #027BCE;
+    
+}
+
 
 p {
     font-size: 30px;
@@ -150,13 +168,21 @@ p {
     padding-bottom: 20;
 }
 
-#carouselExampleControls {
-    float: right;
-    width: 800px;
-}
 
-/* {Ernesto} changing background colors when responsive */
-@media screen and (max-width:992px) {
+/* ivan stop
+/*Mobile and tablet*/
+
+@media only screen and (max-width: 1200px) and (min-width: 651px)  {
+
+    #input-storage, #weather-block {
+        margin-bottom: 20px;
+    }
+
+    .gal {
+        padding: 0;
+    }
+
+}
 
     .top-nav,
     svg,
@@ -166,8 +192,28 @@ p {
         background-color: rgb(32, 187, 187) !important;
     }
 
-    body {
-        background-color: rgb(243, 226, 195);
+
+
+@media only screen and (max-width: 650px) {
+
+    nav  {
+    width: 85%;
+
+    }
+
+    .searchbar {
+    margin: 20px auto;
+
+    }
+
+    #input-storage {
+        max-width: 100%;
+        margin-bottom: 8px;
+    }
+  
+    #carouselExampleControls {
+        /*width: 90%;*/
+        margin: 30px auto;
     }
 
     #presentation {
@@ -177,22 +223,24 @@ p {
         height: 558px;
     }
 
-    .d-block,
-    .w-100 {
-        height: 558px;
+    .expand-search {
+       /* width: 90%;*/
     }
 
-    .current-weather,
-    #currrent-weather {
-        background-color: rgb(243, 226, 195);
+    .gal-row {
+        margin-left: 0;
+        margin-left: 0;
+        margin-top: 10px;
     }
-}
 
-.btTag,
-.wrapper {
-    /* position: relative; */
-    margin-top: 7%;
-    background-color: #027BCE !important;
-}
+  }
 
-/* END */
+
+  /* malcolm
+  css additions from anthony:
+  height: 500;
+  width: 500;
+  background-position: center;
+  background-size: contain; 
+  background-repeat: no-repeat;
+  use js to inject the style  */
