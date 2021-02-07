@@ -43,6 +43,9 @@ gifBlock.addClass("giphy-embed");*/
 const storedSearch = localStorage.getItem("list");
 const searchList = storedSearch ? JSON.parse(storedSearch) : []
 
+//Local storage
+const storedSearch = localStorage.getItem("list");
+const searchList = storedSearch ? JSON.parse(storedSearch) : []
 
 // function for current weather API call
 function currentWeatherAPI(e) {
@@ -90,14 +93,12 @@ function currentWeatherAPI(e) {
       var windSpeed = response.wind.speed;
       $(windTag).text("Wind Speed: " + windSpeed + " MPH");
 
-      // append weather info onto page
-      $(currentWeather).append(weatherTag, tempTag, humidityTag, windTag,);
-      weaBlock.show();
-      inputSto.show();
 
       // call function to retrieve city images and weather gifs
       displayImg();
+<<<<<<< HEAD
       createGif();
+>>>>>>> origin/main
     });
 }
 
