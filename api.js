@@ -89,7 +89,7 @@ function currentWeatherAPI(e) {
     });
 }
 
-// create function that pulls id of city button, calls API to gather images and append to img-gallery
+// create function that pulls id of city button, calls API to gather images and append to carousel
 function displayImg() {
 
   // clear div containing images
@@ -110,7 +110,7 @@ function displayImg() {
       for (var i = 0; i < response.results.length; i++) {
         //create div tag that will contain img and append carousel-item classes
         var divImg = $("<div>").addClass("carousel-item");
-        divImg.attr("id", "img-" + i);
+        divImg.attr("id", i);
 
         //create img tag that will contain city img and append d-block w-100 classes
         var cityImg = $("<img>").addClass("d-block w-100");
@@ -122,10 +122,10 @@ function displayImg() {
         // append divImg to img-gallery id
         $("#img-gallery").append(divImg);
 
-        var firstImgTag = $("#img-0").addClass("active");
+        var firstImgTag = $("#0").addClass("active");
       }
 
-      // calling function to store city name to local storage
+      // local storage function
       storeData();
 
     });
