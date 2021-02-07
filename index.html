@@ -43,7 +43,7 @@
         <main class="container-fluid">
             <div class="row first-row">
                 <!-- city list -->
-                <ul id="input-storage" class="col-sm-8 col-xl list-group">
+                <ul id="input-storage" class="col-sm-2 list-group">
                     <!--<button id="stored-search" class="badge rounded-pill bg-light text-dark">Primary</button>-->
                 </ul>
 
@@ -70,30 +70,28 @@
                 </div>
 
                 <!-- image gallery -->
-                <div class="col-sm-8 col-xl-7 gal">
-                    <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel" data-bs-interval=false>
+                <div class="col-xl-5 gal">
+                    <!-- img carousel -->
+                    <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel" data-bs-interval=false>
+                        <!-- city images -->
                         <div class="carousel-inner" id="img-gallery">
                             <!-- default image -->
                             <div class="carousel-item active">
                                 <img src="https://www.metoffice.gov.uk/binaries/content/gallery/metofficegovuk/hero-images/science/weather-forecast-background.jpg"
                                     class="d-block w-100" alt="forecast">
                             </div>
-                            <!-- city pics go here -->
                         </div>
-
-                        <!-- img-gallery buttons -->
-                        <a class="carousel-control-prev gallery" href="#carouselExampleControls" role="button"
-                            data-bs-slide="prev">
+                
+                        <!--  button -->
+                        <a class="carousel-control-prev gallery" href="#carouselExampleControls" role="button" data-bs-slide="prev">
                             <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                             <span class="visually-hidden">Previous</span>
                         </a>
-                        <a class="carousel-control-next gallery" href="#carouselExampleControls" role="button"
-                            data-bs-slide="next">
+                        <a class="carousel-control-next gallery" href="#carouselExampleControls" role="button" data-bs-slide="next">
                             <span class="carousel-control-next-icon" aria-hidden="true"></span>
                             <span class="visually-hidden">Next</span>
                         </a>
                     </div>
-                </div>
             </div>
 
             <!--End Gallery Container-->
