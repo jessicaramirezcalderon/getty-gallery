@@ -1,6 +1,7 @@
-/*Jess*/
+/*Jess start*/
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;900&display=swap');
 
+/* original css*/
 body {
     background-color: rgba(58,68,93);
 }
@@ -9,10 +10,10 @@ body {
     margin: 10px
 } */
 
-/* {Jess} */
-h1,
-.nav-link {
-    font-family: 'Noto Sans SC', sans-serif;
+/* original css */
+#navbarNavAltMarkup {
+    justify-content: center;
+    margin-top: 30px;
 }
 
 /* original css */
@@ -28,11 +29,7 @@ nav {
     border-radius: 5px;
 }
 
-button:hover {
-    /* {Ivan's Knicks color scheme} */
-    background-color: orange !important;
-    border-color: cornflowerblue !important;
-}
+/*foundation search bar*/
 
 .searchbar {
     margin: 1rem;
@@ -146,26 +143,22 @@ footer {
 }
 
 
-p {
-    font-size: 30px;
+/*ivan start */
+/* modifying buttons */
+.btn-outline-warning {
+    border-color: orange;
+    background-color: cornflowerblue;
 }
 
-/* {Malcolm} Not needed since we are most likely deleting the card */
-/* .card {
-    height: 700px;
-    width: 50%;
-    float: left;
-} */
+.navbar-light .navbar-nav .nav-link {
+    color: black;
+    font-weight: bold;
+    margin-right: 10px;
+}
 
-/* {Malcolm} Placed the d block and w100 together because they didnt seem to move the whole card without eachother  */
-/* {Ernesto} Adjusted Height */
-.d-block,
-.w-100 {
-    height: 600px;
-    width: 900px;
-    /* will test which carousel or d-block floating should float right  */
-    float: right;
-    padding-bottom: 20;
+button:hover {
+    background-color: orange !important;
+    border-color: cornflowerblue !important;
 }
 
 
@@ -184,13 +177,6 @@ p {
 
 }
 
-    .top-nav,
-    svg,
-    button,
-    .navbar,
-    .bg-primary {
-        background-color: rgb(32, 187, 187) !important;
-    }
 
 
 
@@ -216,11 +202,8 @@ p {
         margin: 30px auto;
     }
 
-    #presentation {
-        background-color: rgb(32, 187, 187);
-        margin-bottom: 20%;
-        margin-top: 20%;
-        height: 558px;
+    .input-group-button {
+        margin-left: 0px;
     }
 
     /* .expand-search {
