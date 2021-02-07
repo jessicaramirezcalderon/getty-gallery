@@ -5,9 +5,9 @@ body {
     background-color: rgba(58,68,93);
 }
 
-#carouselExampleControls {
-    /*margin: 10px*/
-}
+/* #carouselExampleControls {
+    margin: 10px
+} */
 
 /* {Jess} */
 h1,
@@ -223,9 +223,9 @@ p {
         height: 558px;
     }
 
-    .expand-search {
-       /* width: 90%;*/
-    }
+    /* .expand-search {
+       width: 90%;
+    } */
 
     .gal-row {
         margin-left: 0;
@@ -234,6 +234,11 @@ p {
     }
 
   }
+
+  li:hover{
+    color:red
+  }
+
 
 
   /* malcolm
